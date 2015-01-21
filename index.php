@@ -60,7 +60,7 @@ if (defined('ENVIRONMENT')){
  *
  * set the path of your basepath, system path, and application path
  */
-define( 'BASEPATH', 'http://getbootpad.herokuapp.com/' ); //must include / (slash) in the end of url
+define( 'BASEPATH', 'https://getbootpad.herokuapp.com/' ); //must include / (slash) in the end of url
 define( 'SYSTEM_PATH', 'system' );
 define( 'APPLICATION_PATH', 'application' );
 
