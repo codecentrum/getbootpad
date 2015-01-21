@@ -60,7 +60,9 @@ if (defined('ENVIRONMENT')){
  *
  * set the path of your basepath, system path, and application path
  */
-define( 'BASEPATH', 'https://getbootpad.herokuapp.com/' ); //must include / (slash) in the end of url
+// define( 'BASEPATH', 'https://getbootpad.herokuapp.com/' ); //must include / (slash) in the end of url
+echo $_SERVER['SERVER_NAME'];
+define( 'BASEPATH', $_SERVER['SERVER_NAME'] ); //must include / (slash) in the end of url
 define( 'SYSTEM_PATH', 'system' );
 define( 'APPLICATION_PATH', 'application' );
 
