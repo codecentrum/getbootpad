@@ -59,45 +59,10 @@ if (defined('ENVIRONMENT')){
  *---------------------------------------------------------------
  *
  * set the path of your basepath, system path, and application path
- *
- * BASEPATH : 
- *		Directory where you install bootpad (root)
- * 		eg: 'http://yoursite.com/' or 'http://localhost/bootpad/'
- *
- * SYSTEM_PATH : 
- *		Directory that you place the bootpad core system 
- * 		by default set to 'system'
- *
- * APPLICATION_PATH : 
- *		Directory that you place the 
- * 		bootpad application (models, views, cotroller, etc.) by default set to 'application'
- *			
  */
-
-function get_base_path(){
-
-	# Get the server protocol (http or https)
-	$server_protocol = strtolower(preg_replace("/[^a-zA-Z+]/", '', $_SERVER['SERVER_PROTOCOL']));
-
-	# Add (://) to server protocol, so can use as URL
-	$server_protocol = rtrim($server_protocol, '://').'://';
-
-	# Get server name (eg: localhost or www.yoursite.com)
-	# Make sure the server name has trailing slash
-	$server_name = rtrim($_SERVER['SERVER_NAME'], '/').'/';
-
-	# Get the root directory your aplication
-	# Make sure the directory has trailing slash
-	$path_info = rtrim(pathinfo(__DIR__, PATHINFO_BASENAME), '/').'/';
-
-	# Combine them
-	$base_path = $server_protocol.$server_name.$path_info;
-
-	# Return them as one URL
-	return $base_path;
-}
-
-define( 'BASEPATH', get_base_path() ); //must include 'http://' before url and '/' (slash) in the end of url
+define( 'BASEPATH', 'https://getbootpad.herokuapp.com/' ); //must include / (slash) in the end of url
+// echo $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'];
+// define( 'BASEPATH', $_SERVER['SERVER_NAME']); //must include / (slash) in the end of url
 define( 'SYSTEM_PATH', 'system' );
 define( 'APPLICATION_PATH', 'application' );
 

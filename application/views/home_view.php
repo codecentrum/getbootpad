@@ -88,7 +88,7 @@
                 <li><a href="<?php echo base_url('api_documentation'); ?>">API Documentation</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../">Eky Fauzi</a></li>
+                <li><a href="http://www.ekyfauzi.com">Eky Fauzi</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!-- /.container-fluid -->
