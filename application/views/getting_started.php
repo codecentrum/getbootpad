@@ -115,10 +115,16 @@
                 <div class="getbootpad-section">
                     <h1 id="installation" class="page-header">Installation</h1>
 
-                    <p class="lead">Build on the application above with Bootpad's many components. We encourage you to customize and adapt Bootpad to suit your individual project's needs.</p>
+                    <p class="lead">
+                        Build on the application above with Bootpad's many components. 
+                        We encourage you to customize and adapt Bootpad to suit your individual project's needs.
+                    </p>
 
                     <h3 id="bootpad_file_structure">Bootpad file structure</h3>
-                    <p>The Bootpad source code download includes the Bootstrap CSS, JavaScript, and font assets, it includes the following and more:</p>
+                    <p>
+                        The Bootpad source code download includes the Bootstrap CSS, JavaScript, and font assets, 
+                        it includes the following and more:
+                    </p>
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
@@ -135,11 +141,11 @@ bootpad/
 │   │   ├── js/
 │   │   └── fonts/
 │   └── jquery/
+├── system/
+│   ├── core/
+│   ├── helpers/
 ├── index.php
-└── system/
-    ├── autoload.php
-    ├── core/
-    └── helpers/
+└── autoload.php
                             </code>
                         </pre>
                     </div>
@@ -182,23 +188,24 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                         <pre>
                             <code>
 <span class="pre-code-comment">
-/*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
- *
- * You can load different configurations depending on your
- * current environment. Setting the environment also influences
- * things like logging and error reporting.
- *
- * This can be set to anything, but default usage is:
- *
- *     development
- *     production
- *
- */
+# 
+# ---------------------------------------------------------------
+#  APPLICATION ENVIRONMENT
+# ---------------------------------------------------------------
+# 
+#  You can load different configurations depending on your
+#  current environment. Setting the environment also influences
+#  things like logging and error reporting.
+# 
+#  This can be set to:
+# 
+#      development
+#      production
+# 
+#
+# By default set to 'development'
 </span>
-define( 'ENVIRONMENT', '<span class="pre-code-blue">development</span>' );
+<span class="pre-code-blue">$environment</span> = '' ;
                             </code>
                         </pre>
                     </div>
@@ -208,30 +215,17 @@ define( 'ENVIRONMENT', '<span class="pre-code-blue">development</span>' );
                         <pre>
                             <code>
 <span class="pre-code-comment">
-/*
- *---------------------------------------------------------------
- * PATH
- *---------------------------------------------------------------
- *
- * set the path of your basepath, system path, and application path
- *
- * BASEPATH : 
- *      Directory where you install bootpad (root)
- *      eg: 'http://yoursite.com/' or 'http://localhost/bootpad/'
- *
- * SYSTEM_PATH : 
- *      Directory that you place the bootpad core system 
- *      by default set to 'system'
- *
- * APPLICATION_PATH : 
- *      Directory that you place the 
- *      bootpad application ( models, views, cotroller, etc.) by default set to 'application'
- *          
- */
+# 
+# ---------------------------------------------------------------
+#  PATH
+# ---------------------------------------------------------------
+
+# Directory where you install bootpad (root)
+# eg: 'http://yoursite.com/' or 'http://localhost/bootpad/'
+# You can set your basepath or you can leave it blank
+# By default basepath will automaticaly set
 </span>
-define( 'BASEPATH', '<span class="pre-code-blue">http://www.yoursite.com/</span>' ); <span class="pre-code-comment">//must include 'http://' before url and '/' (slash) in the end of url</span>
-define( 'SYSTEM_PATH', '<span class="pre-code-blue">system</span>' );
-define( 'APPLICATION_PATH', '<span class="pre-code-blue">application</span>' );
+<span class="pre-code-blue">$basepath</span> = '' ;
                             </code>
                         </pre>
                     </div>
@@ -241,24 +235,22 @@ define( 'APPLICATION_PATH', '<span class="pre-code-blue">application</span>' );
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment">                                
-/*
- * defined first page that opened first time (welcome page)
- */
-</span>
-define( 'CONTROLLER', '<span class="pre-code-blue">home</span>' );
 <span class="pre-code-comment">
-/*
- * defined first method that opened when opened page. eg: www.site.com/welcome/index
- */
+# First controller that you want to open first
+# By default set to 'home'
 </span>
-define( 'METHOD', '<span class="pre-code-blue">index</span>' );
+<span class="pre-code-blue">$controller</span> = '' ;
+<span class="pre-code-comment">
+# Method that you want to open firt time
+# By default set to 'index'
+</span>
+<span class="pre-code-blue">$method</span> = '' ;
                             </code>
                         </pre>
                     </div>
 
                     <h3 id="setup_database">Setup database configuration</h3>
-                    <p>If you want to connect the application to database, just open <code>/application/config.database.php</code> and change this:</p>
+                    <p>If you want to connect the application to database, just open <code>/application/config/database.php</code> and change this:</p>
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
@@ -294,7 +286,7 @@ $db_name = "<span class="pre-code-blue">db_john_doe</span>";
 
                     <h3 id="create_controller">Controller</h3>
                     <p>When you successfuly install boopad on your server, you only can see one page (home). You can modified
-                        that page engine at <code>/application/controllers/home.php</code>.</p>
+                        that page engine at <code>/application/controllers/home_controller.php</code>.</p>
                     <p>To create a new page, you have to create new controller file and place it into <code>/application/controllers/</code>.</p>
                     <p>Here the example controller file:</p>
 
@@ -303,26 +295,23 @@ $db_name = "<span class="pre-code-blue">db_john_doe</span>";
                             <code>
 &lt;?php  
 
-<span class="pre-code-comment">/**
-* profile.php
-*/</span>
+<span class="pre-code-comment">
+# This controller is for example
+# This is controller that call by default
+# You can set deafault controller at index.php ( location in root of this application directory )
+</span>
+class <span class="pre-code-blue">HomeController</span> extends Controller {
 
-class <span class="pre-code-blue">profile</span> extends controller {
-
-    public function index(){
-
-        <span class="pre-code-comment">//Your code here</span>
+    public function <span class="pre-code-blue">index</span>(){
 
     }
 
 }
-
-?&gt;
                             </code>
                         </pre>
                     </div>
-                    <p class="alert alert-warning"><b>Warning</b> : If you want to create page named <code>profile</code> you have to name your class
-                     as <code>profile</code> and save controller file as <code>profile.php</code>.</p>
+                    <p class="alert alert-warning"><b>Warning</b> : If you want to create page named <code>home</code> you have to name your class
+                     as <code>HomeController</code> and save controller file as <code>home_controller.php</code>.</p>
 
                     <h3 id="create_model">Model</h3>
                     <p>You can create more model file and place it into <code>/application/models/</code>.</p>
@@ -336,7 +325,7 @@ class <span class="pre-code-blue">profile</span> extends controller {
 * 
 */</span>
 
-class <span class="pre-code-blue">home_model</span> extends controller{
+class <span class="pre-code-blue">Users</span> extends Controller{
 
     public function hello_world(){
         return "Hello World";
@@ -352,13 +341,13 @@ class <span class="pre-code-blue">home_model</span> extends controller{
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment">// including model if needed</span>
-$this->home_model = $this->model('home_model');
+<span class="pre-code-comment"># including model if needed</span>
+<span class="pre-code-blue">$this->users</span> = $this->model('<span class="pre-code-blue">Users</span>');
 
-<span class="pre-code-comment">// call the model function</span>
-$hello_world = $this->home_model->hello_world();
+<span class="pre-code-comment"># call the model function</span>
+<span class="pre-code-blue">$hello_world</span> = $this->users-><span class="pre-code-blue">hello_world()</span>;
 
-<span class="pre-code-comment">// send value from model to view</span>
+<span class="pre-code-comment"># send value from model to view</span>
 $data_for_view['hello_world'] = $hello_world;
                             </code>
                         </pre>
@@ -370,8 +359,8 @@ $data_for_view['hello_world'] = $hello_world;
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment">// call view and send data for using in view</span>
-$this->view('home_view', $data_for_view);
+<span class="pre-code-comment"># call view and send data for using in view</span>
+$this->view('home', $data_for_view);
                             </code>
                         </pre>
                     </div>

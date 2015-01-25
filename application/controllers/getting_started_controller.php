@@ -6,18 +6,15 @@
 * You can set deafault controller at index.php ( location in root of this application directory )
 */
 
-class api_documentation extends controller {
+class GettingStartedController extends Controller {
 
 	public function index(){
 
 		$data_for_view = array();
 		$data_for_model = array();
 
-		// including library if needed
-		$this->library('functions');
-
 		// call view and send data for using in view
-		$this->view('api_documentation_view', $data_for_view);
+		$this->view('getting_started', $data_for_view);
 
 	}
 
