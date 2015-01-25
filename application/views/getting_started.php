@@ -98,7 +98,7 @@
                 <div class="getbootpad-section">
                     <h1 id="how_to_download" class="page-header">How to download</h1>
 
-                    <p class="lead">Bootpad (currently v1.0.1) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
+                    <p class="lead">Bootpad (currently v1.4.0) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
 
                     <div class="row getbootpad-downloads">
                         <div class="col-sm-4">

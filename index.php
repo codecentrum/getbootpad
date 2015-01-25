@@ -2,7 +2,7 @@
 #
 # bootpad
 # Build with love by Eky Fauzi
-# Currently version 1.0.1
+# Currently version 1.4.0
 #
 
 

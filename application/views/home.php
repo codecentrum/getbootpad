@@ -103,7 +103,7 @@
                 <p class="lead">
                     <a href="https://github.com/ekyfauzi/bootpad/archive/master.zip" class="btn btn-outline-inverse btn-lg">Download bootpad</a>
                 </p>
-                <p class="version">Currently v1.0.1 including Bootstrap v.3.2.0</p>
+                <p class="version">Currently v1.4.0 including Bootstrap v.3.2.0</p>
             </div>
             <!-- <div class="col-md-5">
                 <div class="adsense pull-right">
