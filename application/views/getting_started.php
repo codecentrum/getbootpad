@@ -332,8 +332,6 @@ class <span class="pre-code-blue">Users</span> extends Controller{
     }
 
 }
-
-?&gt;
                             </code>
                         </pre>
                     </div>
