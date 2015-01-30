@@ -1,19 +1,12 @@
-bootpad
-=======
+###Documentation site for Bootpad
 
-The simple MVC application for build the website application easier
-including Twitter Bootstrap and jQuery
-This software is open source, so you can modification if needed
-I hope this flatform can used by everyone even the beginner
+http://getbootpad.heroku.com
 
-Hope you like it
-
-If you have any questions, please contact me
+This website also create by using Bootpad Framework too.
 
 Github @ekyfauzi
 Twitter @ekyfauzi
-Instagram @ekyfauzi
 
-Email me@ekyfauzi.com
+Email ekyfauzi@hotmail.com
 
 http://www.ekyfauzi.com

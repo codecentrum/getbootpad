@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="#">
 
-    <title>Bootpad | Simple PHP Framework Including Bootstrap</title>
+    <title>Bootpad | Simple MVC Framework Build With PHP And Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -64,7 +64,7 @@
 <main class="getbootpad-masthead" style="text-align:left;">
     <div class="container">
         <h1 style="font-size:50px;margin-top:0; margin-bottom:10px;">Getting started</h1>
-        <p style="font-size:24px;font-weight:300;line-height:1.4;margin-bottom:0; color:#bce1f9;">An overview of bootpad, how to use, basic templates and examples, and more.</p>
+        <p style="font-size:24px;font-weight:300;line-height:1.4;margin-bottom:0; color:#bce1f9;">An overview of Bootpad, how to use, basic templates and examples, and more.</p>
     </div>
 </main>
 
@@ -103,9 +103,9 @@
                     <div class="row getbootpad-downloads">
                         <div class="col-sm-4">
                             <h3 id="download-bootstrap">Download Bootpad</h3>
-                            <p>Just one step to download Bootpad source code.</p>
+                            <p class="help-block">Just one step to download Bootpad source code.</p>
                             <p>
-                                <a href="#" class="btn btn-lg getbootpad-btn-outline" role="button">Download Bootpad Now</a>
+                                <a href="https://github.com/ekyfauzi/bootpad/archive/master.zip" class="btn btn-lg getbootpad-btn-outline" role="button">Download Bootpad Now</a>
                             </p>
                         </div>
                     </div>
@@ -187,9 +187,7 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment">
-# 
-# ---------------------------------------------------------------
+<span class="pre-code-comment"># ---------------------------------------------------------------
 #  APPLICATION ENVIRONMENT
 # ---------------------------------------------------------------
 # 
@@ -214,9 +212,7 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment">
-# 
-# ---------------------------------------------------------------
+<span class="pre-code-comment"># ---------------------------------------------------------------
 #  PATH
 # ---------------------------------------------------------------
 
@@ -235,11 +231,12 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment">
-# First controller that you want to open first
+<span class="pre-code-comment"># First controller that you want to open first
 # By default set to 'home'
 </span>
 <span class="pre-code-blue">$controller</span> = '' ;
+
+
 <span class="pre-code-comment">
 # Method that you want to open firt time
 # By default set to 'index'
@@ -255,25 +252,27 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                         <pre>
                             <code>
 <span class="pre-code-comment">
-/* 
- * MySQL hostname 
- * eg. localhost
- */</span>
+# MySQL hostname 
+# eg. localhost
+</span>
 $db_host = "<span class="pre-code-blue">localhost</span>";
+
+
 <span class="pre-code-comment">
-/* 
- * MySQL database username 
- */</span>
+# MySQL database username 
+</span>
 $db_user = "<span class="pre-code-blue">john_doe</span>";
+
+
 <span class="pre-code-comment">
-/* 
- * MySQL database password 
- */</span>
+# MySQL database password 
+</span>
 $db_password = "<span class="pre-code-blue">johndoe123</span>";
+
+
 <span class="pre-code-comment">
-/* 
- * MySQL database name 
- */</span>
+# MySQL database name 
+</span>
 $db_name = "<span class="pre-code-blue">db_john_doe</span>";
                             </code>
                         </pre>
@@ -294,7 +293,6 @@ $db_name = "<span class="pre-code-blue">db_john_doe</span>";
                         <pre>
                             <code>
 &lt;?php  
-
 <span class="pre-code-comment">
 # This controller is for example
 # This is controller that call by default
@@ -321,10 +319,6 @@ class <span class="pre-code-blue">HomeController</span> extends Controller {
                             <code>
 &lt;?php 
 
-<span class="pre-code-comment">/**
-* 
-*/</span>
-
 class <span class="pre-code-blue">Users</span> extends Controller{
 
     public function hello_world(){
@@ -339,14 +333,19 @@ class <span class="pre-code-blue">Users</span> extends Controller{
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment"># including model if needed</span>
+<span class="pre-code-comment"># including model if needed
+</span>
 <span class="pre-code-blue">$this->users</span> = $this->model('<span class="pre-code-blue">Users</span>');
 
-<span class="pre-code-comment"># call the model function</span>
+
+<span class="pre-code-comment"># call the model function
+</span>
 <span class="pre-code-blue">$hello_world</span> = $this->users-><span class="pre-code-blue">hello_world()</span>;
 
-<span class="pre-code-comment"># send value from model to view</span>
-$data_for_view['hello_world'] = $hello_world;
+
+<span class="pre-code-comment"># send value from model to view
+</span>
+$data_for_view['hello_world'] = <span class="pre-code-blue">$hello_world</span>;
                             </code>
                         </pre>
                     </div>
@@ -357,8 +356,9 @@ $data_for_view['hello_world'] = $hello_world;
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-<span class="pre-code-comment"># call view and send data for using in view</span>
-$this->view('home', $data_for_view);
+<span class="pre-code-comment"># call view and send data for using in view
+</span>
+$this->view('<span class="pre-code-blue">home</span>', <span class="pre-code-blue">$data_for_view</span>);
                             </code>
                         </pre>
                     </div>
@@ -368,7 +368,7 @@ $this->view('home', $data_for_view);
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
-$this->library('functions');
+$this->library('<span class="pre-code-blue">functions</span>');
                             </code>
                         </pre>
                     </div>

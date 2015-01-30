@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="#">
 
- 	<title>Bootpad | Simple PHP Framework Including Bootstrap</title>
+ 	<title>Bootpad | Simple MVC Framework Build With PHP And Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -99,11 +99,16 @@
         <div class="row">
             <div class="col-md-7">
                 <img src="<?php echo base_url('assets/getbootpad/getbootpad_logo_white.png'); ?>" height="70px">
-                <p class="lead">Simple MVC PHP Framework <br>styling with <a href="http://getbootstrap.com" target="_blank" style="color:#1c80c1;">Bootstrap</a></p>
                 <p class="lead">
-                    <a href="https://github.com/ekyfauzi/bootpad/archive/master.zip" class="btn btn-outline-inverse btn-lg">Download bootpad</a>
+                  Simple MVC framework </br>
+                  <small>Build with PHP and 
+                    <a href="http://getbootstrap.com" target="_blank" style="color:#1c80c1;">Bootstrap</a>
+                  </small>
                 </p>
-                <p class="version">Currently v1.4.0 including Bootstrap v.3.2.0</p>
+                <p class="lead">
+                    <a href="https://github.com/ekyfauzi/bootpad/archive/master.zip" class="btn btn-outline-inverse btn-lg">Download Bootpad</a>
+                </p>
+                <p class="version">Currently v1.4.0 build with Bootstrap v.3.2.0</p>
             </div>
             <!-- <div class="col-md-5">
                 <div class="adsense pull-right">
@@ -151,8 +156,12 @@
             <div class="col-md-4">
                 <div>
                     <!-- <img src="http://placehold.it/200x100" alt="Texto Alternativo" class="img-thumbnail"> -->
-                    <h3>Free</h3>
-                    <p>You do not need to spend money to use bootpad.<br>Bootpad is free and always be free!</p>
+                    <h3>Beautifull</h3>
+                    <p>You do not need to spend time for styling.
+                      <br>Bootpad have beautifull UI 
+                      <br>providing by 
+                      <a href="http://getbootstrap.com" target="_blank" style="color:#1c80c1;">Bootstrap</a>!
+                    </p>
                 </div>
             </div>
 
@@ -172,32 +181,38 @@
   <div class="container">
     <div class="featurette">
       <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
-      <h2 class="featurette-heading">Fun. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Fun is everything when you're working.</p>
+      <h2 class="featurette-heading">Simple. <span class="text-muted">It's easy to use.</span></h2>
+      <p class="lead">
+        Jus download it and place to your application directory.
+        <br>Its simple and beautifull.
+      </p>
     </div>
   </div>
 </div>
 
+
 <div class="container-white">
   <div class="container">
 
-  <div class="featurette">
-    <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
-    <h2 class="featurette-heading">Focus. <span class="text-muted">Goal.</span></h2>
-    <p class="lead">Alway focus on the target.</p>
-  </div>
-
+    <div class="featurette">
+      <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
+      <h2 class="featurette-heading">Beautifull <span class="text-muted">Interface.</span></h2>
+      <p class="lead">
+        MVC meet Bootstrap? That is Bootpad!
+      </p>
+    </div>
   </div>
 </div>
 
 <div class="container-gray">
   <div class="container">
 
-    <div class="featurette">
-      <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
-      <h2 class="featurette-heading">Work smart, <span class="text-muted">Not hard.</span></h2>
-      <p class="lead">I'm not hard worker, I'm smart worker.</p>
-    </div>
+  <div class="featurette">
+    <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
+    <h2 class="featurette-heading"><span class="text-muted">It's</span> Free!</h2>
+    <p class="lead">You do not need to spend money to use Bootpad.<br>Bootpad is free and always be free!</p>
+  </div>
+
   </div>
 </div>
 
