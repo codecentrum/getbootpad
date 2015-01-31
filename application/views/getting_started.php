@@ -90,22 +90,25 @@
                             <code>
 bootpad/
 ├── application/
-│   ├── config/
 │   ├── controller/
 │   ├── libraries/
 │   ├── models/
 │   └── view/
 ├── assets/
+│   ├── images/
+│   ├── stylesheets/
+│   └── javascripts/
+├── system/
+│   ├── core/
+│   └── helpers/
+├── config/
+├── vendors/
 │   ├── bootstrap/
 │   │   ├── css/
 │   │   ├── js/
 │   │   └── fonts/
 │   └── jquery/
-├── system/
-│   ├── core/
-│   ├── helpers/
-├── index.php
-└── autoload.php
+└── index.php
                             </code>
                         </pre>
                     </div>
@@ -125,14 +128,20 @@ bootpad/
                     <div class="getbootpad-highlight">
                         <pre>
                             <code>
+<span class="pre-code-comment"># IMPORTANT!
+# This file required by Bootpad
+# Please DO NOT delete this file</span>
+
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
 
-<span class="pre-code-comment">#By default the rule will re-direct any url that does not include 
-#the text "index.php", "images", "robots.txt", "js", "css" to your default controller.</span>
+<span class="pre-code-comment"># By default the rule will re-direct any url that does not include 
+# the text "index.php", "images", "robots.txt", "js", "css" to your 
+# default controller</span>
+
 RewriteCond $1 !^(index\.php|images|robots\.txt|css|js)
 
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
@@ -148,7 +157,7 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                         <pre>
                             <code>
 <span class="pre-code-comment"># ---------------------------------------------------------------
-#  APPLICATION ENVIRONMENT
+# APPLICATION ENVIRONMENT
 # ---------------------------------------------------------------
 # 
 #  You can load different configurations depending on your
@@ -173,7 +182,7 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                         <pre>
                             <code>
 <span class="pre-code-comment"># ---------------------------------------------------------------
-#  PATH
+# PATH
 # ---------------------------------------------------------------
 
 # Directory where you install bootpad (root)
@@ -213,7 +222,6 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
                             <code>
 <span class="pre-code-comment">
 # MySQL hostname 
-# eg. localhost
 </span>
 $db_host = "<span class="pre-code-blue">localhost</span>";
 
