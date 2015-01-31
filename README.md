@@ -1,8 +1,8 @@
-###Documentation site for Bootpad
+###Documentation Website for Bootpad
 
-http://getbootpad.heroku.com
+http://getbootpad.herokuapp.com
 
-This website also create by using Bootpad Framework too.
+This application also create by using Bootpad framework too.
 
 Github @ekyfauzi
 Twitter @ekyfauzi

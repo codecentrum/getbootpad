@@ -46,4 +46,18 @@ if ( ! function_exists('redirect')){
 	}
 }
 
+# Render view files
+# Can be access on view
+if ( ! function_exists('render')){
+	function render( $name = null ) {
+
+		if ( $name != '' ) {
+            
+			require_once  APPLICATION_PATH .'/views/'. $name .'.php';
+
+        } 
+
+	}
+}
+
 # End of file

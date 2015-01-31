@@ -1,3 +1,11 @@
+
+.pre-code-comment {
+    color:#999999;
+}
+.pre-code-blue {
+    color:#4F9FCF;
+}
+
 .social-container{
     background-color:#F5F5F5;
     border-bottom-color:#EEEEEE;
@@ -131,7 +139,44 @@
 
 
 
+/* Featurettes
+------------------------- */
 
+/*.featurette-divider {
+  margin: 80px 0;
+}*/
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  padding-bottom: 120px;
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -60px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.container-gray {
+  background-color: #F5F5F5;
+}
+
+.container-white {
+  background-color: #FFF;
+}
 
 
 .features-container{
