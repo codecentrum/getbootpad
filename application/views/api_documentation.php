@@ -19,7 +19,7 @@
 
 <body>
 
-<?php render('layouts/navbar'); ?>
+<?php render('layout', 'layouts/navbar'); ?>
 
 <main class="getbootpad-masthead" style="text-align:left;">
     <div class="container">
@@ -71,7 +71,7 @@
     </div>
 </div>
 
-<?php render('layouts/footer'); ?>
+<?php render('layout', 'layouts/footer'); ?>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
