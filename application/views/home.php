@@ -27,7 +27,7 @@
             <div class="col-md-7">
                 <img src="<?php echo base_url('assets/images/getbootpad_logo_white.png'); ?>" height="70px">
                 <p class="lead">
-                  Simple MVC framework </br>
+                  Simple MVC Framework </br>
                   <small>Build with PHP and 
                     <a href="http://getbootstrap.com" target="_blank" style="color:#1c80c1;">Bootstrap</a>
                   </small>
@@ -122,7 +122,7 @@
   <div class="container">
 
     <div class="featurette">
-      <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
+      <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
       <h2 class="featurette-heading">Beautifull <span class="text-muted">Interface.</span></h2>
       <p class="lead">
         MVC meet Bootstrap? That is Bootpad!
@@ -135,7 +135,7 @@
   <div class="container">
 
   <div class="featurette">
-    <img class="featurette-image img-circle pull-left" src="http://placehold.it/512">
+    <img class="featurette-image img-circle pull-right" src="http://placehold.it/512">
     <h2 class="featurette-heading"><span class="text-muted">It's</span> Free!</h2>
     <p class="lead">You do not need to spend money to use Bootpad.<br>Bootpad is free and always be free!</p>
   </div>
