@@ -8,7 +8,7 @@ class GettingStartedController extends Controller {
 		$data_for_model = array();
 
 		# call view and send data for using in view
-		$this->view('getting_started', $data_for_view);
+		$this->view('getting_started/index', $data_for_view);
 
 	}
 

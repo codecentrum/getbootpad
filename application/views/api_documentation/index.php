@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="#">
-
-    <title>Bootpad | Simple MVC Framework Build With PHP And Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url('vendors/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/stylesheets/getbootpad.css'); ?>" rel="stylesheet">
-    <script type="text/javascript" src="<?php echo base_url('vendors/google/google_analytics.js'); ?>"></script>
-    
-</head>
-
-<body>
-
+<?php render('layout', 'layouts/header'); ?>
 <?php render('layout', 'layouts/navbar'); ?>
 
 <main class="getbootpad-masthead" style="text-align:left;">
@@ -72,14 +52,3 @@
 </div>
 
 <?php render('layout', 'layouts/footer'); ?>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<!-- JQUERY CORE -->
-<script type="text/javascript" src="<?php echo base_url('vendors/jquery/jquery.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('vendors/bootstrap/js/bootstrap.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/javascripts/getbootpad.js'); ?>"></script>
-
-</body>
-</html>

@@ -8,7 +8,7 @@ class HomeController extends Controller {
 		$data_for_model = array();
 
 		# call view and send data for using in view
-		$this->view('home', $data_for_view);
+		$this->view('home/index', $data_for_view);
 
 	}
 
