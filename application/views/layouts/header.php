@@ -13,8 +13,8 @@
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('vendors/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/stylesheets/getbootpad.css'); ?>" rel="stylesheet">
-    <script type="text/javascript" src="<?php echo base_url('vendors/google/google_analytics.js'); ?>"></script>
-    
 </head>
 
 <body>
+    <!-- Google Analytics -->
+    <script type="text/javascript" src="<?php echo base_url('vendors/google/google_analytics.js'); ?>"></script>
